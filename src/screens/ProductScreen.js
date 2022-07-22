@@ -77,10 +77,10 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-        {products.map((product,index) => {
+        {products.map((product) => {
           return (
             <>
-              <div className="product-content" key={index}>
+              <div className="product-content" >
                 <Link to={`/product/${product._id}`}>
                   <img src={product.image} alt="product-image" className="product-image" />
                 </Link>
