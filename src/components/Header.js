@@ -21,8 +21,8 @@ const Header = () => {
           </li>
           <li>
            
-            <a href="#" />
-            Tours
+            <a href="/products" />
+            Products
           </li>
           <li>
            
