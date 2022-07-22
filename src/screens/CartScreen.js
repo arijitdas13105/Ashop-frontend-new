@@ -21,11 +21,11 @@ const CartScreen = () => {
     <>
       <div className="cart-container">
         <div className="cart-items">
-          {cartItems.map((item,i) => {
+          {cartItems.map((item) => {
            
             return (
               <>
-                <div className="single-cart-item" key={i}>
+                <div className="single-cart-item" >
                  <div className="single-cart-image" >
                <Link to={`/product/${item.product}`} ><img src={item.image} /></Link> 
 
