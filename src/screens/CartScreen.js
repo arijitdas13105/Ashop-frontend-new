@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { deleteFromCart } from "../actions/cartAction";
-import Header from "../components/Header";
-import { productDetailsReducer } from "../reducers/productReducers";
+
 import "../style.css";
 
 const CartScreen = () => {

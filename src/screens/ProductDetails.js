@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { addToCart } from "../actions/cartAction";
 import { listProductDetails } from "../actions/productActions";
-// import "./productDetails.css";
 import "../style.css";
 
 const ProductDetails = () => {

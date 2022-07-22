@@ -4,7 +4,6 @@ import {
   PRODUCT_LIST_FAILS,
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
-  PRODUCT_DETAILS_FAILS,
 } from "../constants/productConstant";
 
 export const productListReducer = (state = { products: [] }, action) => {

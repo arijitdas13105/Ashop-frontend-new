@@ -14,7 +14,7 @@ const About = () => {
             <h3>why choose us?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
-            <a  className="btn">learn more</a>
+            <a  className="btn" href='#'>learn more</a>
           </div>
         </div>
       </section>

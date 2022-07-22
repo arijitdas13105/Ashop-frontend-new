@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./screens/Home";
 
@@ -7,8 +6,7 @@ import Header from "./components/Header";
 import ProductDetails from "./screens/ProductDetails";
 import CartScreen from "./screens/CartScreen";
 import ShippingScreen from "./screens/ShippingScreen";
-import RegisterScreen from "./screens/RegisterScreen";
-import LoginScreen from "./screens/LoginScreen";
+
 import ProductScreen from "./screens/ProductScreen";
 
 
@@ -23,8 +21,6 @@ function App() {
        <Route  path='/product/:id' element={<ProductDetails/>} />
        <Route  path='/carts' element={<CartScreen/>} />
        <Route  path='/shipping' element={<ShippingScreen/>} /> 
-        <Route exact path='/register' element={ <RegisterScreen />}  />
-        <Route exact path='/login' element={ <LoginScreen />}  />
         <Route exact path='/products' element={ <ProductScreen />}  />
          
       </Routes>
