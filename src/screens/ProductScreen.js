@@ -27,7 +27,7 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-      {/* {console.log(products)} */}
+      {console.log(products)}
         {products.length && products.map((product, index) => {
           console.log(product._id);
           return (
