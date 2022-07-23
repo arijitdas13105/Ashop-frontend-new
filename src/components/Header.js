@@ -10,36 +10,36 @@ const Header = () => {
     <>
       <nav className="navbar">
         <Link to={"/"}>
-          <h1 className="logo"> Arijit </h1>
+          <h1 className="logo"> Ashop </h1>
         </Link>
         <ul className="nav-links">
 
         <Link  to={"/"}>
           <li className="active">
-            <a  />
+          
             Home
           </li>
         </Link>
           
           <Link to={"/products"}>
-            <li>
-              <a />
+            <li >
+             
               Products
             </li>
           </Link>
 
         
           
-        <Link to={"/about"}>
+        <Link to={"/#"}>
           <li>
-            <a  />
+           
             About
           </li>
         </Link>
 
-          <Link to={"/contact"}>
+          <Link to={"/#"}>
             <li className="ctn">
-            <a  />
+            
             Contact
           </li>
           </Link>
@@ -49,7 +49,7 @@ const Header = () => {
           <Link to="/carts">
             <a className="fas fa-shopping-cart"> {cartItems.length} </a>
           </Link>
-          <Link to="/login">
+          <Link to="/#">
             <a className="fas fa-user" />
           </Link>
         </div>

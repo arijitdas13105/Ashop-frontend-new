@@ -23,29 +23,53 @@
     padding: 10px;
     /* color:whitesmoke; */
     /* color:red; */
-    background: rgb(229, 83, 83);
-    border: 1px solid black;
+    background: #d54e8f;
+    /* border: 1px solid black; */
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,.22) ;
     align-items: center;
     
     z-index: 1;
     height: auto;
     
+    
 
 }
+
 ul{
     list-style: none;
+    
+    text-decoration: none;
 }
 .nav-links{
     display: flex;
     align-items: center;
 }
 .nav-links li{
-margin: 030px;    
+margin: 030px;  
+text-decoration: none;
+
+
+
 }
+.nav-links Link{
+     
+    text-decoration: none;
+    
+    
+}
+
+ul li {
+   color: black; 
+   font-weight: bold;
+   text-decoration: none;  
+   
+}
+
 .active{
     color: white;
-    text-decoration: underline;
-    font-weight: bold;
+    text-decoration: none;
+
+    font-weight: 500;
 }
 .menu-btn{
     position: absolute;
