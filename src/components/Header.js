@@ -9,42 +9,43 @@ const Header = () => {
   return (
     <>
       <nav className="navbar">
-      <Link to={'/'}>
-                <h1 className="logo"> Arijit </h1>
-
-      </Link>
+        <Link to={"/"}>
+          <h1 className="logo"> Arijit </h1>
+        </Link>
         <ul className="nav-links">
+
+        <Link  to={"/"}>
           <li className="active">
-           
-            <a href="#" />
+            <a  />
             Home
           </li>
-          <Link to={'/products'}>
+        </Link>
+          
+          <Link to={"/products"}>
             <li>
-           
+              <a />
+              Products
+            </li>
+          </Link>
+
+        
+          
+        <Link to={"/about"}>
+          <li>
             <a  />
-            Products
+            About
+          </li>
+        </Link>
+
+          <Link to={"/contact"}>
+            <li className="ctn">
+            <a  />
+            Contact
           </li>
           </Link>
           
-          <li>
-           
-            <a href="#" />
-            Explore
-          </li>
-          
-          <li>
-           
-            <a href="#" />
-            About
-          </li>
-          <li className="ctn">
-           
-            <a href="#" />
-            Contact
-          </li>
         </ul>
-        <div className="header-icons " >
+        <div className="header-icons ">
           <Link to="/carts">
             <a className="fas fa-shopping-cart"> {cartItems.length} </a>
           </Link>
