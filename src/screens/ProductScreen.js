@@ -11,12 +11,17 @@ const ProductScreen = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [qty, setQty] = useState(1);
-  const productList = useSelector((state) => state.productListReducer);
-  const { products } = productList;
+  // const productList = useSelector((state) => state.productListReducer);
+  const {products, setProducts} = useState([]);
+  // const { products } = productList;
 
   const addToCartHandler=(id)=>{
     dispatch(addToCart(id,qty))
   }
+
+  useEffect(()=>{
+    setProducts(useSelector((state) => state.productListReducer));
+  }, [])
 
   useEffect(() => {
     dispatch(listProducts());
