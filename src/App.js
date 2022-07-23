@@ -22,6 +22,8 @@ function App() {
        <Route  path='/carts' element={<CartScreen/>} />
        <Route  path='/shipping' element={<ShippingScreen/>} /> 
         <Route exact path='/products' element={ <ProductScreen />}  />
+        <Route exact path='https://ashop-frontend-26p3s4df3-arijitdas13105.vercel.app/api/products' element={ <ProductScreen />}  />
+
          
       </Routes>
     </>
