@@ -15,6 +15,7 @@ const ProductScreen = () => {
   // let pro = useSelector((state) => state.productListReducer);
   // const {products, setProducts} = useState();
   const { products } = productList;
+  
 
   const addToCartHandler=(id)=>{
     dispatch(addToCart(id,qty))
@@ -29,9 +30,9 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-      
+      {console.log(products.Array)}
         {products.map((product, index) => {
-          console.log(product._id);
+          {/* console.log(product._id); */}
           return (
               <div  key={index} className="product-content" >
                 <Link to={`/product/${product._id}`}>
