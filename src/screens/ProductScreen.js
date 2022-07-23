@@ -11,10 +11,10 @@ const ProductScreen = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [qty, setQty] = useState(1);
-  // const productList = useSelector((state) => state.productListReducer);
-  let pro = useSelector((state) => state.productListReducer);
-  const {products, setProducts} = useState();
-  // const { products } = productList;
+  const productList = useSelector((state) => state.productListReducer);
+  // let pro = useSelector((state) => state.productListReducer);
+  // const {products, setProducts} = useState();
+  const { products } = productList;
 
   const addToCartHandler=(id)=>{
     dispatch(addToCart(id,qty))
@@ -29,8 +29,8 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-      {console.log(pro.products)}
-        {pro.products && pro.products.map((product, index) => {
+      
+        {products.map((product, index) => {
           console.log(product._id);
           return (
               <div  key={index} className="product-content" >
