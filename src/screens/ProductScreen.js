@@ -27,7 +27,7 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-        {products.map((product) => {
+        {products.length && products.map((product) => {
           return (
             <>
               <div className="product-content" >
