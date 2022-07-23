@@ -27,10 +27,11 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-        {products.length && products.map((product) => {
+      {/* {console.log(products)} */}
+        {products.length && products.map((product, index) => {
+          console.log(product._id);
           return (
-            <>
-              <div className="product-content" >
+              <div  key={index} className="product-content" >
                 <Link to={`/product/${product._id}`}>
                   <img src={product.image} alt="product-image" className="product-image" />
                 </Link>
@@ -39,7 +40,6 @@ const ProductScreen = () => {
                 <h6> ₹ {product.price} </h6>
                 <button onClick={()=>addToCartHandler(product,id)} className="product-button" >Add to cart</button>
               </div>
-            </>
           );
         })}
       </div>
