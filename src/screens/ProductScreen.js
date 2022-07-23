@@ -12,16 +12,13 @@ const ProductScreen = () => {
   const { id } = useParams();
   const [qty, setQty] = useState(1);
   // const productList = useSelector((state) => state.productListReducer);
-  const {products, setProducts} = useState([]);
+  let pro = useSelector((state) => state.productListReducer);
+  const {products, setProducts} = useState();
   // const { products } = productList;
 
   const addToCartHandler=(id)=>{
     dispatch(addToCart(id,qty))
   }
-
-  useEffect(()=>{
-    setProducts(useSelector((state) => state.productListReducer));
-  }, [])
 
   useEffect(() => {
     dispatch(listProducts());
@@ -32,8 +29,8 @@ const ProductScreen = () => {
         Latest <span>Products</span>
       </h1>
       <div className="gallery">
-      {console.log(products)}
-        {products.length && products.map((product, index) => {
+      {console.log(pro.products)}
+        {pro.products && pro.products.map((product, index) => {
           console.log(product._id);
           return (
               <div  key={index} className="product-content" >
