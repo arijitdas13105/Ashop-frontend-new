@@ -9,11 +9,11 @@ import {
 export const productListReducer = (state = { products: [] }, action) => {
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
-      return { products: [] };
+      return { products: [] ,loading:true};
     case PRODUCT_LIST_SUCCESS:
-      return { products: action.payload };
+      return { products: action.payload,loading : false };
     case PRODUCT_LIST_FAILS:
-      return { error: action.error };
+      return { error: action.error,loading : false };
 
     default:
       return state;
@@ -23,11 +23,11 @@ export const productListReducer = (state = { products: [] }, action) => {
 export const productDetailsReducer = (state = { product: [] }, action) => {
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:
-      return { ...state };
+      return { ...state  , loading:true};
     case PRODUCT_DETAILS_SUCCESS:
-      return { product: action.payload };
+      return { product: action.payload ,loading:false };
     case PRODUCT_LIST_FAILS:
-      return { error: action.eror };
+      return { error: action.eror  ,loading:false};
 
     default:
       return state;

@@ -92,7 +92,23 @@ ul li {
    
 
 }
+.header-product-show{
+    display: none;
+    list-style: none;
+    font-weight: 900;
+    text-decoration: none;
+}
 
+/* ///////////   Loading    ///////////// */
+
+.loading{
+    height: 100vh;
+    background: rgb(142, 158, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
 /* ///////////   HOMESCREEN    ///////////// */
 
@@ -772,6 +788,9 @@ font-weight: BOLD;
     background-size: cover;
     background-repeat: no-repeat;
 
+    }
+    .header-product-show{
+        display: block;
     }
 
         /* ///////////   FOOTER    ///////////// */

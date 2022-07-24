@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {  useParams } from "react-router-dom";
 import { addToCart } from "../actions/cartAction";
 import { listProductDetails } from "../actions/productActions";
+import Loading from "../components/Loading";
+
 import "../style.css";
 
 const ProductDetails = () => {
@@ -10,7 +12,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetailsReducer);
-  const { product } = productDetails;
+  const { product ,loading} = productDetails;
 
   const addToCartHandler = () => {
     dispatch(addToCart(product, qty));
@@ -20,7 +22,9 @@ const ProductDetails = () => {
     dispatch(listProductDetails(id));
   }, [dispatch]);
   return (
-    <>
+    <>{
+      loading ? (<Loading/>)
+    :(
       <div className="productD-wrapper">
         {/* card left */}
         <div className="productD-left">
@@ -134,6 +138,8 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+    )
+    }  
     </>
   );
 };
