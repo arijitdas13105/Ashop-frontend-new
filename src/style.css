@@ -109,6 +109,51 @@ ul li {
     align-items: center;
     
 }
+/* ///////////   Modal    ///////////// */
+
+.modal-suc-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    /* background:black; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal-suc-wrapper{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 20%;
+    height: 15rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.modal-suc-wrapper h2{
+}
+.modal-suc-wrapper img{
+    width: 70px;
+    height: 70px;
+    /* background: black; */
+
+}
+.modal-close-btn{
+    background-color: rgb(29, 18, 18);
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-close{
+    color: red;
+   font-weight: 900;
+   font-size: 30px;
+}
 
 /* ///////////   HOMESCREEN    ///////////// */
 

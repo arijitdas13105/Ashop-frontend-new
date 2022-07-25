@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { saveShippingAddress } from "../actions/cartAction";
-import '../style.css'
+import ModalSuccOrder from "../components/ModalSuccOrder";
+
+import "../style.css";
 
 const ShippingScreen = () => {
   const dispatch = useDispatch();
@@ -17,47 +19,53 @@ const ShippingScreen = () => {
   const [city, setCity] = useState(shippingAddress.city);
   const [postalcode, setPostalcode] = useState(shippingAddress.postalcode);
   const [country, setCountry] = useState(shippingAddress.country);
+  const [show, setShow] = useState(false);
+
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(saveShippingAddress({ address, city, postalcode, country }));
-    navigate("/payment");
+    // dispatch(saveShippingAddress({ address, city, postalcode, country }));
+    // navigate("/payment");
+    setShow(true);
+  };
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setShow(false);
+    navigate("/");
   };
   return (
     <>
-     
-      
       <div className="Ashipping-containers">
         <div className="Ashipping-wrapper ">
-          <form>
+          <form onSubmit={submitHandler}>
             <div>
               <h1>shipping </h1>
               <h3>Please enter your shipping details. </h3>
             </div>
             <div className="address-input">
-              <div className="shipping-names"  >
-                <input type="text" placeholder=" First name" />
-                <input type="text" placeholder=" Last name" />
+              <div className="shipping-names">
+                <input type="text" placeholder=" First name" required />
+                <input type="text" placeholder=" Last name" required />
               </div>
-              <div  className="shipping-user-address" >
-                <input type="text" placeholder=" Phone Number" />
-                <input type="text" placeholder=" address" />
-                <input type="text" placeholder=" Country" />
+              <div className="shipping-user-address">
+                <input type="text" placeholder=" Phone Number" required />
+                <input type="text" placeholder=" address" required />
+                <input type="text" placeholder=" Country" required />
               </div>
 
-              <div className="shipping-user-city" >
-                
-                  <input type="text" placeholder=" city" />
+              <div className="shipping-user-city">
+                <input type="text" placeholder=" city" required />
 
-                  <input type="text" placeholder=" zip code " />
+                <input type="text" placeholder=" zip code " required />
 
-                  <input type="text" placeholder=" state" />
-               
-                
+                <input type="text" placeholder=" state" required />
               </div>
             </div>
 
-            <button className="shipping-btn" >Continue</button>
+            <button className="shipping-btn">Continue</button>
           </form>
+          <ModalSuccOrder onClose={closeModal} show={show} />
+          {/* <ModalSuccOrder onClose={()=>setShow(false)}  show={show}/> */}
         </div>
       </div>
     </>
