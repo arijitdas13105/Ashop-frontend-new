@@ -46,28 +46,28 @@ const Footer = () => {
               <span>Singapore</span>
               <span>USA</span>
               <span>Japan</span>
-              <span>Japan</span>
-              <span>Japan</span>
+              <span>UAE</span>
+              <span>HongKong</span>
             </div>
 
             <div className="footer-box">
-              <h1>Locations</h1>
-              <span>India</span>
-              <span>Singapore</span>
-              <span>USA</span>
-              <span>Japan</span>
-              <span>Japan</span>
-              <span>Japan</span>
+              <h1>Help</h1>
+              <span>Shipping</span>
+              <span>Cancellation </span>
+              <span>Refunds</span>
+              <span>FAQ</span>
+              <span>Report</span>
+              <span>Privacy</span>
             </div>
 
             <div className="footer-box">
-              <h1>Locations</h1>
-              <span>India</span>
-              <span>Singapore</span>
-              <span>USA</span>
-              <span>Japan</span>
-              <span>Japan</span>
-              <span>Japan</span>
+              <h1>Policy</h1>
+              <span>Return Policy</span>
+              <span>Terms of use</span>
+              <span>Security</span>
+              <span>Press</span>
+              <span>Careers</span>
+              
             </div>
           </div>
           <div className="footer2-contact">
