@@ -2,7 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../style.css";
+import { Link as Scroll} from "react-scroll";
 
+// import Blogo from '.../'
 const Header = () => {
   const cartReducer = useSelector((state) => state.cartReducer);
   const { cartItems } = cartReducer;
@@ -10,11 +12,13 @@ const Header = () => {
     <>
       <nav className="navbar">
         <Link to={"/"}>
-          <h1 className="logo"> Ashop </h1>
-        </Link>
+          {/* <h1 className="logo"> Ashop </h1> */}
+        <img src="images/ashop-logo.png" className="navbar-Link-img"/>
+         </Link>
         <ul className="nav-links">
 
         <Link  to={"/"}>
+        
           <li className="active">
           
             Home
@@ -22,16 +26,19 @@ const Header = () => {
         </Link>
           
           <Link to={"/products"}  >
-            <li >
+          
+             <li className="header-li" >
              
               Products
             </li>
+          
+           
           </Link>
 
         
           
-        <Link to={"/#"}>
-          <li>
+        <Link to={"/about"}>
+          <li >
            
             About
           </li>

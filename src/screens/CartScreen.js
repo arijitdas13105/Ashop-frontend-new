@@ -85,7 +85,7 @@ const CartScreen = () => {
               navigate("/shipping");
             }}
           >
-            check out
+            Check out
           </button>
          
          

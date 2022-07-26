@@ -73,8 +73,12 @@ const Footer = () => {
           <div className="footer2-contact">
             <div className="footer2-contact-wrap">
               <h1>Stay in touch</h1>
-              <input placeholder="email address" type="text" />
-            </div>
+              <div className="footer2-input-wrap">
+              <input placeholder="email address" type="text"/>
+              <i class="fa-solid fa-arrow-right-from-bracket footer2-send-icon" ></i>
+              </div>
+              
+               </div>
           </div>
         </div>
       </section>
