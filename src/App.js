@@ -23,7 +23,7 @@ function App() {
        <Route  path='/carts' element={<CartScreen/>} />
        <Route  path='/shipping' element={<ShippingScreen/>} /> 
         <Route exact path='/products' element={ <ProductScreen />}  />
-        <Route exact path='/about' element={ <About />}  />
+        {/* <Route exact path='/about' element={ <About />}  /> */}
         {/* <Route exact path='https://ashop-server.herokuapp.com/api/products' element={ <ProductScreen />}  /> */}
 
          

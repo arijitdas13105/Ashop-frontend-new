@@ -6,10 +6,10 @@ const About = () => {
         <section className="about" id="about">
         <h1 className="heading"> <span> about </span> us </h1>
         <div className="row">
-          <div className="video-container">
+          {/* <div className="video-container">
             <video src="images/about-vid.mp4" loop autoPlay muted />
             <h3>best flower sellers</h3>
-          </div>
+          </div> */}
           <div className="content">
             <h3>why choose us?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
