@@ -13,7 +13,7 @@ export const listProducts = () => async (dispatch) => {
     dispatch({ type: PRODUCT_LIST_REQUEST });
     // const { data } = await axios.get("api/products");
     // const { data } = await axios.get("https://fakestoreapi.com/products");
-    const { data } = await axios.get("https://arijitdas13105-ashop-backend.onrender.com//api/products");
+    const { data } = await axios.get("https://arijitdas13105-ashop-backend.onrender.com/api/products");
   //  const { data } = await axios.get("https://ashop-server.herokuapp.com/api/products");
     // console.log('api/products', data);
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
